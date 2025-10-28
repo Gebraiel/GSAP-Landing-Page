@@ -1,0 +1,11 @@
+
+body{
+    font-family: "Poppins";
+    min-height: 100vh;
+}
+.title{
+    font-family: "DM Serif Display";
+}
+.category img, .white-overlay, .content .title, .content .subtitle ,.nav-item{
+    will-change: transform, opacity;
+}
