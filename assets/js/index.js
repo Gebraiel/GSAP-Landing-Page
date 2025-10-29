@@ -5,6 +5,8 @@ const tl = gsap.timeline({
 
     }
 });
+const mm = gsap.matchMedia();
+
 tl.from(".white-overlay",{
     opacity:0,
     scaleY:0,
@@ -19,6 +21,15 @@ tl.fromTo(".category img",{opacity:0,scale:1.1},{
     duration:1,
     ease: "power4.out"
 })
+
+mm.add("(max-width: 1023px)", () => {
+    tl.add(() => {
+        gsap.to(".cta-btn", {
+        //   backgroundColor:"black",
+          opacity:1
+        });
+    });
+});
 tl.from(".content .title",{
     opacity:0,
     yPercent:100,
